@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> form      </title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>Easy Travels</span></h1>
+    <div class="wrapper">
+      <div class="company-info">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><i class="fa fa-road"></i> Andheri,Mumbai</li>
+          <li><i class="fa fa-phone"></i> 4255 555</li>
+          <li><i class="fa fa-envelope"></i> easytravels@gmail.com </li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Trip Details</h3>
+        <!--div class="alert">Your message has been sent</div-->
+        <form id="contactForm" action="mail.php" method="POST">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label for="Places">Choose Destination:</label>
+              <select name="Places" id="places">
+                    <option value="Cubbon Park">Cubbon Park</option>
+                    <option value="Bangalore Palace">Bangalore Palace</option>
+                    <option value="Visvesvaraya Industrial and Technological Museum">Visvesvaraya Industrial and Technological Museum</option>
+                    <option value="Bannerghatta National Park">Bannerghatta National Park</option>
+                    <option value="Nandi Hills">Nandi Hills</option>
+                    <option value="Devanahalli Fort">Devanahalli Fort</option>
+                   
+             </select>
+  <br><br>
+ 
+          </p>
+         
+          <p>
+            <label for="date">Date:</label>
+            <input type="date" id="Date" name="date">
+          </p>
+          <p class="full">
+            <label>Things to carry</label>
+            <textarea name="message" rows="5" id="message"></textarea>
+          </p>
+           <p>
+            <label>Email Addresses to be notified</label><br>
+            <input type="email" name="email1" id="email" placeholder="Email 1" required>
+            <input type="email" name="email2" id="email"  placeholder="Email 2" required>
+          </p>
+            <input type="submit">
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
